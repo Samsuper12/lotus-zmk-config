@@ -13,7 +13,7 @@
 
 
 
-
+#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
@@ -130,8 +130,8 @@
 // |       |  @  |  -  |  (   |  )   |  &   |        |  |       | MUTE |  PGDN |   v   |  :   |   *   |   |   |
 //                     |  F11 |      |      |        |  |       |      |       |  F12  |
             bindings = <
-&kp GRAVE  &rgb_ug RGB_TOG    &rgb_ug RGB_TOG    &rgb_ug RGB_TOG      &rgb_ug RGB_TOG     &rgb_ug RGB_TOG                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp PLUS
-&rgb_ug RGB_TOG     &kp EXCL  &kp HOME  &kp UP      &kp END    &kp PRCNT                  &kp C_VOL_UP  &kp PG_UP  &kp INS   &kp CARET  &kp PSCRN &kp MINUS
+&kp GRAVE  &rgb_ug RGB_TOG    &rgb_ug RGB_HUI    &rgb_ug RGB_BRI      &rgb_ug RGB_BRD     &rgb_ug RGB_HUD                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp PLUS
+&rgb_ug RGB_EFF     &kp EXCL  &kp HOME  &kp UP      &kp END    &kp PRCNT                  &kp C_VOL_UP  &kp PG_UP  &kp INS   &kp CARET  &kp PSCRN &kp MINUS
 &trans     &kp HASH  &kp LEFT  &kp DOWN    &kp RIGHT  &kp DLLR  &trans   &trans  &kp C_VOL_DN  &kp LEFT   &kp UP    &kp RIGHT  &kp TILDE &kp UNDER
 &trans     &kp AT    &kp MINUS &kp LBRC    &kp RBRC   &kp AMPS  &trans   &trans  &kp C_MUTE    &kp PG_DN  &kp DOWN  &kp COLON  &kp STAR  &kp PIPE
                                &kp F11     &trans     &trans    &trans   &trans  &trans        &trans     &kp F12
