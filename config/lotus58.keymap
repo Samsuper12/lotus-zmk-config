@@ -40,7 +40,6 @@
         segment-remap;
         com-invdir;
         prechargep = <0xF1>;
-        vcomh = <0x40>;
         multiplex-ratio = <63>;
     };
 };
