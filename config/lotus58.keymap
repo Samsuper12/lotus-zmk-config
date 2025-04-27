@@ -37,8 +37,8 @@
         height = <64>;
         page-offset = <0>;
         display-offset = <0>;
-        segment-remap = 1;
-        com-invdir = 1;
+        segment-remap = <1>;
+        com-invdir = <1>;
         prechargep = <0xF1>;
         multiplex-ratio = <63>;
     };
