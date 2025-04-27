@@ -33,11 +33,12 @@
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         label = "SSD1306";
-        width = <64>;
-        height = <128>;
+        width = <128>;
+        height = <64>;
         page-offset = <0>;
         display-offset = <0>;
         prechargep = <0xF1>;
+        multiplex-ratio = <63>;
     };
 };
 
