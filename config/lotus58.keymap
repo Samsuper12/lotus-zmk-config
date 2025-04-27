@@ -29,7 +29,7 @@
 &i2c0 {
     status = "okay";
     ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
+        compatible = "solomon,ssd1306fb-i2c";
         reg = <0x3c>;
         label = "SSD1306";
         width = <128>;
@@ -37,6 +37,8 @@
         page-offset = <0>;
         display-offset = <0>;
         prechargep = <0xF1>;
+        vcomh = <0x40>;
+        multiplex-ratio = <63>;
     };
 };
 
