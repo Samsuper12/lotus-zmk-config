@@ -37,6 +37,7 @@
         height = <64>;
         page-offset = <0>;
         display-offset = <0>;
+        segment-remap;
         prechargep = <0xF1>;
         multiplex-ratio = <63>;
     };
