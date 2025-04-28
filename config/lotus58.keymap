@@ -153,8 +153,8 @@
         layer_1 {
             bindings = <
 &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-&kp TAB   &trans    &trans    &trans    &trans    &trans                                &trans    &trans    &trans    &trans    &trans    &trans
-&kp LSHFT &trans    &trans    &kp BSPC  &kp DELETE &trans   &trans            &trans    &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans
+&kp TAB   &trans    &kp PSCRN &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
+&kp LSHFT &to 3     &trans    &kp BSPC  &kp DELETE &trans   &trans            &trans    &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans
 &kp LCTRL &trans    &trans    &kp INSERT &kp ESCAPE &trans  &trans            &trans    &trans    &kp HOME  &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                               &kp LALT  &kp BSPC  &mo 3     &kp SPACE         &kp ENTER &mo 3     &kp RSHIFT &kp LEFT_GUI
             >;
@@ -177,10 +177,10 @@
 
         layer_3 {
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans                                &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans                                &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &kp RGB_EFF &kp RGB_HUD    &kp RGB_HUI                                &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &kp RGB_EFR &kp RGB_SAD    &kp RGB_SAI                                &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &trans      &kp RGB_BRD    &kp RGB_BRI    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&trans    &trans    &trans    &kp RGB_TOG &kp RGB_SPD    &kp RGB_SPI    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
                     &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
