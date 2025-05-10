@@ -5,7 +5,6 @@
  */
 
 #include "lotus58.dtsi"
-#include "i2c.dtsi"
 
 &kscan0 {
     col-gpios
