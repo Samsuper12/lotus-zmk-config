@@ -5,7 +5,8 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "lotus58-layouts.dtsi"
+#include <physical_layouts.dtsi>
+
 
 / {
     chosen {
@@ -37,8 +38,11 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5)  RC(4,6)  RC(3,6) RC(3,7
         rows = <0>;
         events = <0>;
     };
-};
 
-&physical_layout0 {
-    transform = <&default_transform>;
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default";
+        transform = <&default_transform>;
+
+    };
 };
