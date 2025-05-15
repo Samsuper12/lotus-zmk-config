@@ -89,12 +89,6 @@
     };
 
     behaviors {
-        consumer: behavior_consumer {
-            compatible = "zmk,behavior-consumer";
-            #binding-cells = <0>;
-
-        };
-
         fofunc: four_ffour {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -113,22 +107,6 @@
             bindings = <&kp F>, <&kp RIGHT>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
-
-        ecd_v: encoder_vol {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "Volume Encoder";
-            #binding-cells = <0>;
-            #sensor-binding-cells = <0>;
-            bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
-        };
-
-        ecd_s: encoder_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "Scroll Encoder";
-            #binding-cells = <0>;
-            #sensor-binding-cells = <0>;
-            bindings = <&kp PG_DN>, <&kp PG_UP>;
-        };
     };
 
     keymap {
@@ -139,11 +117,11 @@
 &kp ESC   &kp N1 &kp N2   &kp N3     &kp N4    &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp MINUS
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LEFT_BRACKET
 &kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &trans         &trans     &kp H     &kp J       &kp K     &kp L    &kp SEMI &kp SINGLE_QUOTE
-&kp LCTRL &kp Z  &kp X    &kp C      &kp V     &kp B      &kp C_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp SLASH &kp RIGHT_BRACKET
+&kp LCTRL &kp Z  &kp X    &kp C      &kp V     &kp B      &kp K_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp SLASH &kp RIGHT_BRACKET
                           &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&ecd_v &ecd_v>;
+            sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
         };
 
          layer_1 {
