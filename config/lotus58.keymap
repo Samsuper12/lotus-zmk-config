@@ -35,6 +35,13 @@
     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH)>;
 };
 
+&right_encoder {
+    status = "okay";
+    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH)>;
+    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH)>;
+};
+
+
 
 
 //---------------------------------------------------
