@@ -113,14 +113,14 @@
         };
 
         ecd_v: encoder_vol {
-            compatible = "zmk,behavior-encoder";
+            compatible = "zmk,behavior-sensor-rotate";
             label = "Volume Encoder";
             #sensor-binding-cells = <0>;
             bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
         };
 
         ecd_s: encoder_scroll {
-            compatible = "zmk,behavior-encoder";
+            compatible = "zmk,behavior-sensor-rotate";
             label = "Scroll Encoder";
             #sensor-binding-cells = <0>;
             bindings = <&kp PG_DN>, <&kp PG_UP>;
@@ -139,7 +139,7 @@
                           &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&ecd_v C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&ecd_v &ecd_v>;
         };
 
          layer_1 {
