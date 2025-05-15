@@ -92,7 +92,7 @@
         consumer: behavior_consumer {
             compatible = "zmk,behavior-consumer";
         };
-        
+
         fofunc: four_ffour {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -115,12 +115,14 @@
         encoder_vol: encoder_vol {
             compatible = "zmk,behavior-encoder";
             label = "Volume Encoder";
+            #sensor-binding-cells = <0>;
             bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
         };
 
         encoder_scroll: encoder_scroll {
             compatible = "zmk,behavior-encoder";
             label = "Scroll Encoder";
+            #sensor-binding-cells = <0>;
             bindings = <&kp PG_DN>, <&kp PG_UP>;
         };
     };
