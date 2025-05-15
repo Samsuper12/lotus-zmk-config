@@ -115,6 +115,7 @@
         ecd_v: encoder_vol {
             compatible = "zmk,behavior-sensor-rotate";
             label = "Volume Encoder";
+            #binding-cells = <0>;
             #sensor-binding-cells = <0>;
             bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
         };
@@ -122,6 +123,7 @@
         ecd_s: encoder_scroll {
             compatible = "zmk,behavior-sensor-rotate";
             label = "Scroll Encoder";
+            #binding-cells = <0>;
             #sensor-binding-cells = <0>;
             bindings = <&kp PG_DN>, <&kp PG_UP>;
         };
