@@ -107,6 +107,18 @@
             bindings = <&kp F>, <&kp RIGHT>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        encoder_vol: encoder_vol {
+            compatible = "zmk,behavior-encoder";
+            label = "Volume Encoder";
+            bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
+        };
+
+        encoder_scroll: encoder_scroll {
+            compatible = "zmk,behavior-encoder";
+            label = "Scroll Encoder";
+            bindings = <&kp PG_DN>, <&kp PG_UP>;
+        };
     };
 
     keymap {
@@ -121,7 +133,7 @@
                           &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&encoder_vol &encoder_scroll>;
         };
 
          layer_1 {
@@ -150,10 +162,10 @@
 
         layer_3 {
             bindings = <
-&trans    &trans    &trans    &rgb_ug RGB_EFF &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &rgb_ug RGB_EFR &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                                &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans          &rgb_ug RGB_BRD  &rgb_ug RGB_BRI    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &rgb_ug RGB_TOG &rgb_ug RGB_SPD  &rgb_ug RGB_SPI    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&out OUT_TOG    &trans    &trans    &rgb_ug RGB_EFF &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &trans    &trans    &bt BT_CLR
+&trans          &trans    &trans    &rgb_ug RGB_EFR &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                                &trans         &trans          &trans          &trans    &trans    &trans
+&trans          &trans    &trans    &trans          &rgb_ug RGB_BRD  &rgb_ug RGB_BRI    &trans            &trans    &trans         &trans          &trans          &trans    &trans    &trans
+&trans          &trans    &trans    &rgb_ug RGB_TOG &rgb_ug RGB_SPD  &rgb_ug RGB_SPI    &trans            &trans    &trans         &trans          &trans          &trans    &trans    &trans
                     &trans    &trans        &trans        &trans        &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
