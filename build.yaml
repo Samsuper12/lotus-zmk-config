@@ -25,4 +25,3 @@ include:
   - board: nice_nano_v2
     shield: lotus58_right
     snippet: zmk-usb-logging
-0
