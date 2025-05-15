@@ -112,14 +112,14 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        encoder_vol: encoder_vol {
+        ecd_v: encoder_vol {
             compatible = "zmk,behavior-encoder";
             label = "Volume Encoder";
             #sensor-binding-cells = <0>;
             bindings = <&consumer C_VOL_DN>, <&consumer C_VOL_UP>;
         };
 
-        encoder_scroll: encoder_scroll {
+        ecd_s: encoder_scroll {
             compatible = "zmk,behavior-encoder";
             label = "Scroll Encoder";
             #sensor-binding-cells = <0>;
@@ -139,7 +139,7 @@
                           &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&encoder_vol>, <&encoder_scroll>;
+            sensor-bindings = <&ecd_v C_VOL_DN C_VOL_UP>;
         };
 
          layer_1 {
