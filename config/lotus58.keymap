@@ -89,6 +89,10 @@
     };
 
     behaviors {
+        consumer: behavior_consumer {
+            compatible = "zmk,behavior-consumer";
+        };
+        
         fofunc: four_ffour {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
