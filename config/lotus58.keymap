@@ -20,7 +20,7 @@
         width = <128>;
         height = <64>;
        // segment-remap;
-       // com-invdir;
+        com-invdir;
         com-sequential;
         //inversion-on;
         page-offset = <0>;
