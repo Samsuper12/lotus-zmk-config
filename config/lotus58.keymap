@@ -19,6 +19,10 @@
         label = "SSD1306";
         width = <128>;
         height = <64>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
         page-offset = <0>;
         display-offset = <0>;
         prechargep = <0xF1>;
