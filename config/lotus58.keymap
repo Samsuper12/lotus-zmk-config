@@ -115,14 +115,14 @@
             compatible = "zmk,behavior-macro";
             label = "CTRL_ALT_K";
             #binding-cells = <0>;
-            bindings = <&kp LC(LALT(K))>;
+            bindings = <&kp LC LALT K>;
         };
 
         sw_p_w: switch_previous_window {
             compatible = "zmk,behavior-macro";
             label = "CTRL_ALT_L";
             #binding-cells = <0>;
-            bindings = <&kp LC(LALT(L))>;
+            bindings = <&kp LC LALT L>;
         };
     };
 
