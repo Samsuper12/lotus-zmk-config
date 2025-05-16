@@ -21,28 +21,10 @@
         height = <64>;
         page-offset = <0>;
         display-offset = <0>;
-        segment-remap;
-        com-invdir;
         prechargep = <0xF1>;
         multiplex-ratio = <63>;
     };
 };
-
-
-&left_encoder {
-    status = "okay";
-    a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH)>;
-    b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH)>;
-};
-
-&right_encoder {
-    status = "okay";
-    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH)>;
-    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH)>;
-};
-
-
-
 
 //---------------------------------------------------
 &pinctrl {
@@ -128,6 +110,20 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
+
+        sw_n_w: switch_next_window {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_ALT_K";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LALT(K))>;
+        };
+
+        sw_p_w: switch_previous_window {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_ALT_L";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LALT(L))>;
+        };
     };
 
     keymap {
@@ -142,7 +138,7 @@
                           &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOL_DN K_VOL_UP>, <&inc_dec_kp K_VOL_DN K_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp &sw_p_w &sw_n_w &inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
          layer_1 {
@@ -154,7 +150,7 @@
                               &kp LALT  &kp BSPC  &mo 3     &kp SPACE         &kp ENTER &mo 3     &kp RSHIFT &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         layer_2 {
