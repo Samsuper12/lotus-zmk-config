@@ -9,6 +9,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0; 
     };
 
     mock_kscan: mock_kscan_0 {
@@ -17,4 +18,8 @@
         rows = <0>;
         events = <0>;
     };
+};
+
+&physical_layout0 {
+    transform = <&default_transform>;
 };
