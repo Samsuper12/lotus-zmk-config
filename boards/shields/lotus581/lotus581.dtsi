@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
-#include "lotus58-layouts.dtsi"
+#include "lotus581-layouts.dtsi"
 
 / {
     chosen {

@@ -1,0 +1,11 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_LOTUS581_DONGLE
+    def_bool $(shields_list_contains,lotus581_dongle)
+
+config SHIELD_LOTUS581_LEFT
+    def_bool $(shields_list_contains,lotus581_left)
+
+config SHIELD_LOTUS581_RIGHT
+    def_bool $(shields_list_contains,lotus581_right)

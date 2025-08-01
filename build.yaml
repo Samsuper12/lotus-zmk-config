@@ -20,8 +20,8 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: lotus58_dongle prospector_adapter
+    shield: lotus581_dongle prospector_adapter
   - board: nice_nano_v2
-    shield: lotus58_left
+    shield: lotus581_left
   - board: nice_nano_v2
-    shield: lotus58_right
+    shield: lotus581_right

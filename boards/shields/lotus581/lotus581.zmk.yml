@@ -1,6 +1,6 @@
 file_format: "1"
-id: lotus58
-name: Lotus58
+id: lotus581
+name: Lotus581
 type: shield
 url: https://github.com/TweetyDaBird/Lotus58
 requires: [pro_micro]
@@ -11,6 +11,6 @@ features:
   - encoder
   - studio
 siblings:
-  - lotus58_dongle
-  - lotus58_left
-  - lotus58_right
+  - lotus581_dongle
+  - lotus581_left
+  - lotus581_right
