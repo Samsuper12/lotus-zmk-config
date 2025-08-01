@@ -15,7 +15,6 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
-        zmk,underglow = &underglow;
     };
 
     default_transform: keymap_transform_0 {
@@ -71,11 +70,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5)  RC(4,6)  RC(3,6) RC(3,7
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
-
-    underglow: underglow {
-    compatible = "zmk,underglow";
-    strip = <&led_strip>;
-};
 };
 
 &physical_layout0 {

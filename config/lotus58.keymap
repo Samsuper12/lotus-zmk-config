@@ -11,7 +11,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
-
 / {
     combos {
         compatible = "zmk,combos";
