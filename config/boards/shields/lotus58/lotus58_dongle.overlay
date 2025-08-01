@@ -9,7 +9,7 @@
 &default_transform {
     columns = <0>;
     rows = <0>;
-}
+};
 
 &kscan0 {
     col-gpios
