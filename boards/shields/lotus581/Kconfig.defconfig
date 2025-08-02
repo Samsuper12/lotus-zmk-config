@@ -28,15 +28,6 @@ if SHIELD_LOTUS581_LEFT || SHIELD_LOTUS581_RIGHT
 config ZMK_SPLIT
     default y
 
-config ZMK_RGB_UNDERGLOW
-    default y
-
-config WS2812_STRIP
-    default y
-
-config ZMK_RGB_UNDERGLOW_EXT_POWER
-    default y
-
 if ZMK_DISPLAY
 
 config I2C
