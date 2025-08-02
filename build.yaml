@@ -2,7 +2,7 @@ include:
 # Dongle
   - board: seeeduino_xiao_ble
     shield: lotus581_dongle prospector_adapter
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Lotus581Dongle\" -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_STUDIO=y 
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Lotus581Dongle\" -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=n
     snippet: studio-rpc-usb-uart
 # Left half
   - board: nice_nano_v2
