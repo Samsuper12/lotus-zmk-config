@@ -4,15 +4,20 @@ manifest:
       url-base: https://github.com/Samsuper12
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: Samsuper12
-      revision: underglow_test_4
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: prospector-zmk-module
       remote: carrefinho
+      revision: main
+    - name: os-detector-zmk-module
+      remote: Samsuper12
       revision: main
   self:
     path: config
