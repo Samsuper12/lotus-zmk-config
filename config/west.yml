@@ -16,7 +16,7 @@ manifest:
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main
-    - name: os-detector-zmk-module
+    - name: os-detector-behavior-zmk-module
       remote: Samsuper12
       revision: main
   self:
