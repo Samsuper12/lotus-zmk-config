@@ -68,7 +68,11 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-
+        ctrl_os: ctrl_os {
+            compatible = "zmk,behavior-os-mod";
+            #binding-cells = <2>;
+            bindings = <&kp LCTRL KP_OS_LINUX>;
+        };
     };
 
     keymap {
