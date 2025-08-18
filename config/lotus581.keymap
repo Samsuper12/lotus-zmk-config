@@ -71,6 +71,7 @@
 
         ctrl_os: ctrl_os {
             compatible = "zmk,behavior-os-mod";
+            #binding-cells = <0>;
             bindings = <&os_choose KP_OS_LINUX &kp LEFT_GUI>;
         };
     };
