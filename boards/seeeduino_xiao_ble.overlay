@@ -19,7 +19,7 @@ The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin
     };
 };
 
-&spi2 {
+&spi3 {
     compatible = "nordic,nrf-spim";
     status = "okay";
 
