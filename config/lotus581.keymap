@@ -5,8 +5,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <behaviors/os_selector.dtsi>
-#include <behaviors/os_choose.dtsi>
+#include <os_layer.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
