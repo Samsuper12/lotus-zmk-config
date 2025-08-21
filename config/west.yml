@@ -18,6 +18,6 @@ manifest:
       revision: main
     - name: os-layer-zmk-module
       remote: Samsuper12
-      revision: main
+      revision: usb_os_detector
   self:
     path: config
