@@ -47,6 +47,22 @@
                        <&macro_release &kp LEFT_GUI>;
 
         };
+
+        mac_lang: mac_lang_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>,
+                       <&macro_tap &kp SPACE>,
+                       <&macro_release &kp LCTRL>;
+        };
+
+        other_lang: other_lang_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>,
+                       <&macro_tap &kp LALT>,
+                       <&macro_release &kp LSHFT>;
+        };
     };
 
     behaviors {
@@ -83,6 +99,13 @@
             bindings = <&os_choose KP_OS_OTHER &kp DELETE>,
                         <&os_choose KP_OS_MAC &mac_del>;
         };
+
+        os_lang: os_lang {
+            compatible = "zmk,behavior-os-mod";
+            #binding-cells = <0>;
+            bindings = <&os_choose KP_OS_OTHER &other_lang>,
+                        <&os_choose KP_OS_MAC &mac_lang>;
+        };
     };
 
     keymap {
@@ -103,7 +126,7 @@
          layer_util {
             bindings = <
 &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-&kp TAB   &trans    &os_prscrn &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
+&kp TAB   &os_lang    &os_prscrn &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
 &kp LSHFT &mo 3     &trans    &kp BSPC  &os_del &trans   &trans            &trans    &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans
 &os_lctrl &trans    &trans    &kp INSERT &kp ESCAPE &trans  &trans            &trans    &trans    &kp HOME  &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                               &kp LALT  &kp BSPC  &mo 3     &kp SPACE         &kp ENTER &mo 3     &os_rctrl &kp LEFT_GUI
