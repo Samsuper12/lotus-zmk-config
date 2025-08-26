@@ -63,6 +63,14 @@
                        <&macro_tap &kp LALT>,
                        <&macro_release &kp LSHFT>;
         };
+
+        mac_q_moon: mac_q_moon_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LSHFT &kp LALT>,
+                       <&macro_tap &kp Q>,
+                       <&macro_release &kp LCTRL &kp LSHFT &kp LALT>;
+        };
     };
 
     behaviors {
@@ -126,7 +134,7 @@
          layer_util {
             bindings = <
 &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-&kp TAB   &os_lang    &os_prscrn &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
+&kp TAB   &os_lang    &os_prscrn &kp SLCK  &kp C_PAUSE &trans                                &mac_q_moon    &trans    &trans    &trans    &trans    &trans
 &kp LSHFT &mo 3     &trans    &kp BSPC  &os_del &trans   &trans            &trans    &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans
 &os_lctrl &trans    &trans    &kp INSERT &kp ESCAPE &trans  &trans            &trans    &trans    &kp HOME  &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                               &kp LALT  &kp BSPC  &mo 3     &kp SPACE         &kp ENTER &mo 3     &os_rctrl &kp LEFT_GUI
