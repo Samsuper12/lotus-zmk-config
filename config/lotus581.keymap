@@ -95,7 +95,7 @@
             #binding-cells = <0>;
             bindings = <&os_choose KP_OS_OTHER &kp PSCRN>,
                         <&os_choose KP_OS_MAC &mac_prscrn>;
-        }
+        };
     };
 
     keymap {
