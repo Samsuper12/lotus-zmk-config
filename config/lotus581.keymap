@@ -40,6 +40,14 @@
                        <&macro_tap &kp K>,
                        <&macro_release &kp LCTRL &kp LSHIFT>;
         };
+
+        mac_prscrn: mac_prscrn_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LEFT_GUI &kp LSHIFT>,
+                       <&macro_tap &kp N5>,
+                       <&macro_release &kp LEFT_GUI &kp LSHIFT>;
+        };
     };
 
     behaviors {
@@ -68,12 +76,26 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-        ctrl_os: ctrl_os {
+        os_lctrl: os_lctrl {
             compatible = "zmk,behavior-os-mod";
             #binding-cells = <0>;
             bindings = <&os_choose KP_OS_OTHER &kp LCTRL>,
                         <&os_choose KP_OS_MAC &kp LEFT_GUI>;
         };
+
+        os_rctrl: os_rctrl {
+            compatible = "zmk,behavior-os-mod";
+            #binding-cells = <0>;
+            bindings = <&os_choose KP_OS_OTHER &kp RSHIFT>,
+                        <&os_choose KP_OS_MAC &kp LCTRL>;
+        };
+
+        os_prscrn: os_prscrn {
+            compatible = "zmk,behavior-os-mod";
+            #binding-cells = <0>;
+            bindings = <&os_choose KP_OS_OTHER &kp PSCRN>,
+                        <&os_choose KP_OS_MAC &mac_prscrn>;
+        }
     };
 
     keymap {
@@ -84,8 +106,8 @@
 &kp ESC   &kp N1 &kp N2   &kp N3     &kp N4    &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp MINUS
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LEFT_BRACKET
 &kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &trans         &trans     &kp H     &kp J       &kp K     &kp L    &kp SEMI &kp SINGLE_QUOTE
-&ctrl_os &kp Z  &kp X    &kp C      &kp V     &kp B      &kp K_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp SLASH &kp RIGHT_BRACKET
-                          &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &kp RSHIFT  &kp LEFT_GUI
+&os_lctrl &kp Z  &kp X    &kp C      &kp V     &kp B      &kp K_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp SLASH &kp RIGHT_BRACKET
+                          &kp LALT   &kp BSPC  &mo 1 &kp SPACE     &kp ENTER  &mo 2  &os_rctrl  &kp LEFT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp &sw_p_w &sw_n_w &inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -94,7 +116,7 @@
          layer_util {
             bindings = <
 &kp ESC   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-&kp TAB   &trans    &kp PSCRN &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
+&kp TAB   &trans    &os_prscrn &kp SLCK  &kp C_PAUSE &trans                                &trans    &trans    &trans    &trans    &trans    &trans
 &kp LSHFT &mo 3     &trans    &kp BSPC  &kp DELETE &trans   &trans            &trans    &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &trans
 &ctrl_os &trans    &trans    &kp INSERT &kp ESCAPE &trans  &trans            &trans    &trans    &kp HOME  &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                               &kp LALT  &kp BSPC  &mo 3     &kp SPACE         &kp ENTER &mo 3     &kp RSHIFT &kp LEFT_GUI
