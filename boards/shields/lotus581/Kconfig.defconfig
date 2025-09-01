@@ -3,6 +3,9 @@
 
 if SHIELD_LOTUS581_DONGLE
 
+config ZMK_BRIDGE
+    select UART_NATIVE_POSIX_PORT_1_ENABLE
+
 config ZMK_KEYBOARD_NAME
     default "Lotus581"
 
