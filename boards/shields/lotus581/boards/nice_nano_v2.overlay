@@ -39,11 +39,9 @@
     };
 };
 
- &uart1 { status = "okay"; };
 
 / {
     chosen {
         zmk,underglow = &led_strip;
-        zmk,bridge-uart  = &uart1;
     };
 };
