@@ -44,6 +44,8 @@ The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin
     };
 };
 
+ &uart1 { status = "okay"; };
+
 / {
     chosen {
         zmk,underglow = &led_strip;
