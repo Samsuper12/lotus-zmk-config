@@ -13,13 +13,13 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: bridge-zmk-module
+      remote: Samsuper12
+      revision: main
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main
     - name: os-layer-zmk-module
-      remote: Samsuper12
-      revision: main
-    - name: bridge-zmk-module
       remote: Samsuper12
       revision: main
   self:
