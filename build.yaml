@@ -3,7 +3,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: lotus581_dongle prospector_adapter
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Lotus581Dongle\" -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_STUDIO=n -DCONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=n -DZMK_BLE_IS_CENTRAL=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_BRIDGE=y
-    snippet: bridge-usb-uart #zmk-usb-logging
+    snippet: bridge-usb-uart zmk-usb-logging
 #Left half
   - board: nice_nano_v2
     shield: lotus581_left
