@@ -4,6 +4,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-  
-  bridge:
-    uses: Samsuper12/bridge-zmk-module/.github/workflows/collect-proto.yml@main
