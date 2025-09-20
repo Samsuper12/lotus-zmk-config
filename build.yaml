@@ -7,7 +7,7 @@ include:
 #Left half
   - board: nice_nano_v2
     shield: lotus581_left
-    #snippet: bridge-usb-uart #zmk-usb-logging
+    snippet: zmk-usb-logging
 # Right half
   - board: nice_nano_v2
     shield: lotus581_right
