@@ -7,13 +7,13 @@ include:
 #Left half
   - board: nice_nano_v2
     shield: lotus581_left
-    snippet: zmk-usb-logging
+    #snippet: zmk-usb-logging
 # Right half
   - board: nice_nano_v2
     shield: lotus581_right
-    #snippet: bridge-usb-uart #zmk-usb-logging
+    #snippet: #zmk-usb-logging
 # Reset
- # - board: nice_nano_v2
-  #  shield: settings_reset
-  #- board: seeeduino_xiao_ble
-   # shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
